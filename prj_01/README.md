@@ -7,5 +7,12 @@
 
 Скорее всего придется реализовать конечный автомат.
 
+Добавьте кнопку, которая будет открывать новую активность, на которой будут отображены сведения об авторе (TextView).
+При клике по сведениям об авторе они будут анимироваться.
+
 Ссылки
 ------
+
+http://developer.android.com/guide/topics/ui/themes.html
+
+http://developer.android.com/guide/topics/resources/animation-resource.html
