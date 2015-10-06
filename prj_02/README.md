@@ -19,6 +19,8 @@
 * http://developer.android.com/tools/help/sqlite3.html
 * http://developer.android.com/training/basics/data-storage/databases.html
 * http://developer.android.com/guide/topics/ui/layout/listview.html
+* http://developer.alexanderklimov.ru/android/sqlite/
+* http://developer.alexanderklimov.ru/android/listview/
 
 Уровень 2
 ---------
@@ -43,5 +45,9 @@
 * http://developer.android.com/guide/components/fragments.html
 * http://developer.android.com/training/basics/fragments/communicating.html
 * http://developer.android.com/training/basics/fragments/index.html
+* http://developer.alexanderklimov.ru/android/theory/fragments.php
+* http://developer.alexanderklimov.ru/android/views/fragment.php
+* http://developer.alexanderklimov.ru/android/theory/fragment-add.php
+* http://developer.alexanderklimov.ru/android/theory/fragment-replace.php
 
 
