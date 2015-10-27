@@ -22,12 +22,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Vie
     public GameView(Activity context) {
         super(context);
 
-        player = new Character(context, this);
-
         gameObjects = new ArrayList<>();
-
-        gameObjects.add(player);
-        player.setAction(Character.Actions.HURT, Character.Directions.RIGHT);
 
         this.getHolder().addCallback(this);
         this.setOnTouchListener(this);
@@ -35,6 +30,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback, Vie
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
+        player = new Character(this.getContext(), this);
+        gameObjects.add(player);
+        player.setAction(Character.Actions.HURT, Character.Directions.RIGHT);
+
         gameThread = new GameThread(this);
         gameThread.start();
     }

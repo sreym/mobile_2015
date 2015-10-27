@@ -44,6 +44,8 @@ public class Character extends GameObject {
 
     public Character(Context context, GameView game) {
         this.game = game;
+        this.x = game.getWidth() / 2;
+        this.y = game.getHeight() / 2;
         try {
             character = BitmapFactory.decodeStream(context.getAssets().open("character.png"));
         } catch (IOException e) {
@@ -72,15 +74,17 @@ public class Character extends GameObject {
         frame++;
         frame %= ACTION_FRAMES[action] * 3;
 
-        x += dx;
-        y += dy;
+        if (dx < 0 && x + dx - width/2 >= 0) x += dx;
+        if (dx >= 0 && x + dx + width/2 <= game.getWidth()) x += dx;
+        if (dy < 0 && y + dy - height/2 >= 0) y += dy;
+        if (dy >= 0 && y + dy + height/2 <= game.getHeight()) y += dy;
     }
 
     @Override
     public void render(Canvas canvas) {
         int dframe = frame / 3;
         Rect src = new Rect(64 * dframe, 64 * action, 64 * (dframe + 1), 64 * (action + 1));
-        Rect dst = new Rect(x, y, x + width, y + height);
+        Rect dst = new Rect(x - width / 2, y - height / 2, x + width - width / 2, y + height - height / 2);
         canvas.drawBitmap(character, src, dst, new Paint());
     }
 }
