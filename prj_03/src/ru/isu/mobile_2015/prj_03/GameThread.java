@@ -19,12 +19,18 @@ public class GameThread extends Thread {
         while(true) {
             canvas = gameView.getHolder().lockCanvas();
 
-            Paint p = new Paint();
-            p.setColor(Color.WHITE);
+            canvas.drawRect(0,0, canvas.getWidth(), canvas.getHeight(), new Paint());
 
-            canvas.drawRect(10,10,400,400, p);
+            gameView.transform();
+            gameView.render(canvas);
 
             gameView.getHolder().unlockCanvasAndPost(canvas);
+
+            try {
+                this.sleep(1000 / 50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
