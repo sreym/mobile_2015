@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="greyb">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">#ff272b36</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="blueb" parent="greyb">
+        <item name="android:background">#ff0074ae</item>
+        <item name="android:textSize">35dp</item>
+    </style>
+</resources>
