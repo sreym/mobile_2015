@@ -9,12 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" android:id="@+id/id" android:gravity="center_horizontal">
-        <fragment android:layout_width="wrap_content"
-                  android:layout_height="match_parent"
-                  android:name="com.app.calculator.TextFieldsFragment1" android:id="@+id/textFragment"
-                  tools:layout="@layout/textfield"
-                  android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
-                  android:layout_alignBottom="@+id/EQ"/>
+
     </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
@@ -26,10 +21,22 @@
                   tools:layout="@layout/fragment1"
                   android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
                   android:layout_alignBottom="@+id/EQ"/>
-        <fragment android:layout_width="match_parent"
+        <fragment android:layout_width="wrap_content"
                   android:layout_height="match_parent"
                   android:name="com.app.calculator.CalculatorFragment2" android:id="@+id/fragment2"
                   tools:layout="@layout/fragment2"
+                  android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
+                  android:layout_alignBottom="@+id/EQ"/>
+        <fragment android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:name="com.app.calculator.ExtraButtons" android:id="@+id/extrabuttons"
+                  tools:layout="@layout/extrabuttons"
+                  android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
+                  android:layout_alignBottom="@+id/EQ"/>
+        <fragment android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:name="com.app.calculator.TextFieldsFragment1" android:id="@+id/textFragment"
+                  tools:layout="@layout/textfield"
                   android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
                   android:layout_alignBottom="@+id/EQ"/>
     </LinearLayout>
