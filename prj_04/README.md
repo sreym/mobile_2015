@@ -13,6 +13,10 @@
 
 ### Ссылки
 
+* https://vk.com/dev/main
+* https://vk.com/dev/standalone
+* https://github.com/VKCOM/vk-android-sdk
+
 Уровень 2
 ---------
 Данная работа дает ещё *30 баллов*.
