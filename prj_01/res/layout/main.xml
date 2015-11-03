@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1" android:baselineAligned="false" android:orientation="vertical"
+        >
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" android:id="@+id/id" android:gravity="center_horizontal">
+        <fragment android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:name="com.app.calculator.TextFieldsFragment1" android:id="@+id/textFragment"
+                  tools:layout="@layout/textfield"
+                  android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
+                  android:layout_alignBottom="@+id/EQ"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff000000" android:gravity="bottom">
+        <fragment android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:name="com.app.calculator.CalculatorFragment1" android:id="@+id/fragment1"
+                  tools:layout="@layout/fragment1"
+                  android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
+                  android:layout_alignBottom="@+id/EQ"/>
+        <fragment android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:name="com.app.calculator.CalculatorFragment2" android:id="@+id/fragment2"
+                  tools:layout="@layout/fragment2"
+                  android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
+                  android:layout_alignBottom="@+id/EQ"/>
+    </LinearLayout>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AUTHOR"
+            android:id="@+id/author" style="@style/greyb" android:onClick="ClickAuthor"/>
+</LinearLayout>
+

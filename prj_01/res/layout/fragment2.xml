@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="＋"
+                android:id="@+id/plus"
+                android:onClick="ClickPlus" android:singleLine="false"
+                style="@style/blueb"
+                android:layout_alignParentTop="true" android:layout_toEndOf="@+id/fragment"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/minus"
+                android:onClick="ClickMinus"
+                style="@style/blueb"
+                android:layout_below="@+id/plus"
+                android:layout_alignParentEnd="true" android:layout_alignStart="@+id/plus"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="×"
+                android:id="@+id/mult"
+                android:onClick="ClickMult"
+                android:layout_below="@+id/minus" android:layout_alignParentEnd="true"
+                style="@style/blueb"
+                android:layout_alignStart="@+id/minus"/>
+
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dev"
+                android:text="÷"
+                android:onClick="ClickDev"
+                style="@style/blueb"
+                android:layout_below="@+id/mult" android:layout_alignStart="@+id/mult"
+                android:layout_alignParentEnd="true"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="="
+                android:id="@+id/EQ"
+                android:onClick="ClickEq"
+                style="@style/blueb"
+                android:layout_below="@+id/dev" android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/dev"/>
+    </LinearLayout>
+</LinearLayout>
