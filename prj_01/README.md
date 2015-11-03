@@ -15,6 +15,9 @@
 * http://developer.android.com/training/basics/activity-lifecycle/index.html
 * http://developer.android.com/guide/topics/ui/overview.html
 * http://developer.android.com/guide/topics/ui/declaring-layout.html
+* http://habrahabr.ru/post/181820/
+* http://startandroid.ru/en/uroki/vse-uroki-spiskom/15-urok-6-vidy-layouts-kljuchevye-otlichija-i-svojstva
+* http://startandroid.ru/en/uroki/vse-uroki-spiskom/38-urok-7-layout-parametry-dlja-view-elementov
 
 Уровень 2
 ---------
@@ -27,6 +30,8 @@
 * http://developer.android.com/guide/topics/ui/themes.html
 * http://developer.android.com/guide/topics/resources/animation-resource.html
 * http://developer.android.com/training/basics/firstapp/starting-activity.html
+* http://developer.alexanderklimov.ru/android/theory/lifecycle.php
+* http://softdroid.net/starting-activity
 
 Уровень 3
 ---------
@@ -38,5 +43,9 @@
 * http://developer.android.com/guide/components/fragments.html
 * http://developer.android.com/training/basics/fragments/communicating.html
 * http://developer.android.com/training/basics/fragments/index.html
+* http://developer.alexanderklimov.ru/android/theory/fragments.php
+* http://developer.alexanderklimov.ru/android/views/fragment.php
+* http://developer.alexanderklimov.ru/android/theory/fragment-add.php
+* http://developer.alexanderklimov.ru/android/theory/fragment-replace.php
 
 
