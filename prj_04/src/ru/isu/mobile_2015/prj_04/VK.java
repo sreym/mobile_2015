@@ -1,4 +1,4 @@
-package com.example.prj_04;
+package ru.isu.mobile_2015.prj_04;
 
 import android.content.Intent;
 import org.json.JSONException;

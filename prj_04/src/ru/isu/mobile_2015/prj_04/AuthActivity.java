@@ -1,13 +1,10 @@
-package com.example.prj_04;
+package ru.isu.mobile_2015.prj_04;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by sergey on 10/11/15.
