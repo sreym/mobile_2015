@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -13,6 +13,7 @@ public class FriendsListActivity extends Activity {
     public static final int ACCESS_TOKEN_REQEST = 1;
 
     ListView listView;
+    FriendsListAdapter listViewAdapter;
     VK vk;
 
     AsyncTask<Void,Void,JSONArray> updateFriendsList = new AsyncTask<Void,Void,JSONArray>() {
@@ -31,22 +32,8 @@ public class FriendsListActivity extends Activity {
         @Override
         protected void onPostExecute(JSONArray friends) {
             super.onPostExecute(friends);
-            String[] friendsNames = new String[friends.length()];
-            try {
-                for(int i = 0; i < friends.length(); i++) {
-                    friendsNames[i] = friends.getJSONObject(i).getString("first_name") +
-                            " " + friends.getJSONObject(i).getString("last_name");
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            ArrayAdapter<String> adapter = new ArrayAdapter(
-                    FriendsListActivity.this,
-                    android.R.layout.simple_list_item_1,
-                    friendsNames);
-
-            listView.setAdapter(adapter);
+            listViewAdapter = new FriendsListAdapter(FriendsListActivity.this, friends);
+            listView.setAdapter(listViewAdapter);
         }
     };
 
@@ -63,6 +50,13 @@ public class FriendsListActivity extends Activity {
                 ACCESS_TOKEN_REQEST);
 
         listView = (ListView)findViewById(R.id.listView);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(FriendsListActivity.this, id + "", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
