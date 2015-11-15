@@ -40,20 +40,11 @@
                   android:layout_alignTop="@+id/plus" android:layout_alignParentStart="false"
                   android:layout_alignBottom="@+id/EQ"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                  android:orientation="horizontal">
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="AUTHOR"
                 android:id="@+id/author" style="@style/blueb" android:onClick="ClickAuthor" android:layout_weight="1"
                 android:textSize="20dp"/>
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="LISTS"
-                android:id="@+id/lists" style="@style/greyb" android:onClick="ClickLists" android:layout_weight="1"
-                android:textSize="20dp"/>
-    </LinearLayout>
 </LinearLayout>
 
