@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     boolean isdotclicked = false;
     TextView t1, t2, s;
     int condition = 0;
-    Button one, two, three, four, five, six, seven, eight, nine, zero, plus, minus, plmn, mult, dev, c, del, eq, dot, author, pow;
+    Button one, two, three, four, five, six, seven, eight, nine, zero, plus, minus, plmn, mult, dev, c, del, eq, dot, author, pow, lists;
 
     public int getRotation() {
         int rotation = getWindowManager().getDefaultDisplay().getRotation();
@@ -73,13 +73,16 @@ public class MainActivity extends Activity {
         eq = (Button) findViewById(R.id.EQ);
         author = (Button) findViewById(R.id.author);
         pow = (Button) findViewById(R.id.pow);
+        lists = (Button)findViewById(R.id.lists);
     }
 
     public void StartAnimation1(View v) {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
         v.startAnimation(animation);
     }
+    public void ClickLists(View v){
 
+    }
     public void ClickPow(View v) {
         StartAnimation1(pow);
         isdotclicked = false;

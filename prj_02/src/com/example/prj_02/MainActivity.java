@@ -5,10 +5,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
+import android.widget.*;
 
 public class MainActivity extends Activity {
     /**
@@ -23,7 +20,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        intent = new Intent(MainActivity.this, AddNewActivity.class);
+        intent = new Intent(this, AddNewActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         listView = (ListView) findViewById(R.id.listview);
@@ -37,19 +34,28 @@ public class MainActivity extends Activity {
                 new String[]{DB.Table.COL_TASK},
                 new int[]{android.R.id.text1},
                 0);
-        // adapter.getCursor();
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View item, int position, long id) {
+
+            }
+        });
     }
 
     public void onClickAdd(View v) {
-        startActivityForResult(intent, 1);
-        onActivityResult(1, 1, intent);
+        startActivity(intent);
     }
 
-    @Override
-    protected void onActivityResult(int i, int j, Intent intent) {
-        adapter.getCursor();
-
+    public void refreshList(View v) {
+        adapter = new SimpleCursorAdapter(
+                this,
+                android.R.layout.simple_list_item_1,
+                db.getTasksCursor(),
+                new String[]{DB.Table.COL_TASK},
+                new int[]{android.R.id.text1},
+                0);
+        listView.setAdapter(adapter);
     }
 
 }

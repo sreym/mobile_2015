@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 /**
  * Created by Interstellar on 13.10.2015.
@@ -26,9 +27,17 @@ public class AddNewActivity extends Activity {
     }
 
     public void onClickAdd2(View v) {
-        db.insertTask(textfield.getText().toString());
-        this.setResult(2);
-        this.finish();
+        if (textfield.getText().toString() != "") {
+            db.insertTask(textfield.getText().toString());
+            this.finish();
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), "Empty Text Field", Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
+
+    public void onClickField(View v) {
+        textfield.setText("");
     }
 }
 

@@ -8,7 +8,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textfield" android:text="Name your task" android:editable="true" android:enabled="true"
-            android:focusable="true"/>
+            android:focusable="true" android:onClick="onClickField"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

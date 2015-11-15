@@ -7,11 +7,15 @@
               android:layout_height="match_parent"
               android:name="com.example.prj_02.OptionListFragment" android:id="@+id/options"
               tools:layout="@layout/optionlist" android:layout_weight="0"/>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ADD"
-            android:id="@+id/add" android:onClick="onClickAdd"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD"
+                android:id="@+id/add" android:onClick="onClickAdd"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="REF"
+                android:id="@+id/refresh" android:onClick="refreshList" android:longClickable="true"/>
+    </LinearLayout>
     <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
