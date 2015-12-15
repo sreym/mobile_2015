@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">prj_01</string>
+    <string name="action_settings">Settings</string>
+    <string name="about_text">
+    Это мое первое приложение.\n
+    Если Вы видите это сообщение, то <b>ОНО РАБОТАЕТ</b>\n
+    Контактная информация Вам вряд ли понадобится\n
+    Но если что, то вот: vk.com/kipina , 8-983-444-26-48\n
+    </string>
+    <string name="about_title">О программе</string>
+</resources>
